@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Check, PackageCheck, ShieldCheck, ShoppingBag, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 import { assets } from "../lib/assets";
+import { CompactCheckout } from "./CompactCheckout";
 import { useTranslation } from "../lib/i18n";
 
 const sizes = ["7", "8", "9", "10", "11", "12", "13"];
@@ -155,6 +156,10 @@ export function ProductDetails() {
                 </p>
               ))}
             </div>
+          </div>
+
+          <div className="mt-8 flex justify-center sm:mt-9">
+            <CompactCheckout />
           </div>
         </motion.div>
       </div>
