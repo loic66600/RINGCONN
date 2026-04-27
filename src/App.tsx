@@ -1,5 +1,6 @@
 import { CheckoutSection } from "./components/CheckoutSection";
 import { ComparisonSection } from "./components/ComparisonSection";
+import { CookieBanner } from "./components/CookieBanner";
 import { EmotionSection } from "./components/EmotionSection";
 import { FAQ } from "./components/FAQ";
 import { FeatureGrid } from "./components/FeatureGrid";
@@ -30,6 +31,7 @@ export default function App() {
         <FAQ />
         <Footer />
         <MobileStickyCta />
+        <CookieBanner />
       </main>
     </TranslationProvider>
   );
