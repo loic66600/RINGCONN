@@ -34,6 +34,16 @@ const translations = {
       secondaryCta: "Explorer les fonctions",
       floating: "Preparation, sommeil et recuperation en direct",
       trusted: "Adoptee par les profils performants",
+      benefits: [
+        "Suivi du sommeil",
+        "Stress en temps reel",
+        "Signes vitaux jour et nuit",
+        "Jusqu'a 10 jours d'autonomie",
+        "Fine et legere",
+        "Recuperation plus lisible",
+        "Activite et entrainement",
+        "Sante des femmes",
+      ],
     },
     showcase: {
       eyebrow: "Intelligence premium",
@@ -291,6 +301,16 @@ const translations = {
       secondaryCta: "Explore features",
       floating: "Live readiness, sleep and recovery intelligence",
       trusted: "Trusted by modern performers",
+      benefits: [
+        "Sleep tracking",
+        "Real-time stress",
+        "Day and night vital signs",
+        "Up to 10 days battery",
+        "Thin and lightweight",
+        "Clearer recovery",
+        "Activity and training",
+        "Women's health",
+      ],
     },
     showcase: {
       eyebrow: "Premium intelligence",

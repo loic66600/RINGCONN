@@ -40,10 +40,10 @@ export function ProductShowcase() {
           </p>
         </motion.div>
 
-        <div className="relative mx-auto mt-12 min-h-[700px] max-w-5xl lg:min-h-[700px]">
-          <div className="absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_50%_45%,rgba(201,103,232,0.24),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.06),transparent)] blur-3xl" />
+        <div className="relative mx-auto mt-10 max-w-5xl pb-8 lg:mt-12 lg:min-h-[660px] lg:pb-0">
+          <div className="absolute inset-x-0 top-16 h-[560px] rounded-[2rem] bg-[radial-gradient(circle_at_50%_45%,rgba(201,103,232,0.22),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.05),transparent)] blur-3xl lg:inset-0 lg:h-auto" />
           <motion.div
-            className="absolute left-1/2 top-[47%] z-10 flex aspect-square w-[72%] max-w-[520px] -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-white/10 bg-white/[0.025] backdrop-blur-xl"
+            className="relative z-10 mx-auto mt-8 flex aspect-square w-[86%] max-w-[480px] items-center justify-center rounded-full border border-white/10 bg-white/[0.025] backdrop-blur-xl sm:w-[70%] lg:absolute lg:left-1/2 lg:top-[47%] lg:mt-0 lg:w-[72%] lg:max-w-[520px] lg:-translate-x-1/2 lg:-translate-y-1/2"
             initial={{ opacity: 0, scale: 0.88 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.4 }}
@@ -61,7 +61,7 @@ export function ProductShowcase() {
             <div className="absolute z-0 h-[38%] w-[58%] rounded-full border-[16px] border-white/5 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(250,147,250,0.1),rgba(152,58,214,0.16))] opacity-45" />
           </motion.div>
 
-          <div className="relative z-20 grid gap-4 pt-6 sm:grid-cols-2 lg:block lg:pt-0">
+          <div className="relative z-20 mt-6 grid gap-4 sm:grid-cols-2 lg:mt-0 lg:block">
             {metrics.map((metric, index) => {
               const Icon = metric.icon;
               const copy = t.showcase.metrics[index];
