@@ -61,7 +61,7 @@ export function ProductShowcase() {
             <div className="absolute z-0 h-[38%] w-[58%] rounded-full border-[16px] border-white/5 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(250,147,250,0.1),rgba(152,58,214,0.16))] opacity-45" />
           </motion.div>
 
-          <div className="relative z-20 mt-5 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-0 lg:block">
+          <div className="relative z-20 mt-5 hidden gap-3 sm:grid sm:grid-cols-2 sm:gap-4 lg:mt-0 lg:block">
             {metrics.map((metric, index) => {
               const Icon = metric.icon;
               const copy = t.showcase.metrics[index];

@@ -18,10 +18,10 @@ function HeroVideo() {
   }, []);
 
   return (
-    <div className="relative z-10 hidden -mt-20 w-full overflow-hidden sm:block sm:-mt-28 lg:-mt-36">
+    <div className="relative z-10 -mt-2 w-full overflow-hidden sm:-mt-16 lg:-mt-20">
       <video
         ref={videoRef}
-        className="mix-blend-screen max-h-[52vh] w-full object-cover sm:max-h-[58vh] lg:max-h-none"
+        className="mix-blend-screen max-h-[32vh] w-full object-cover sm:max-h-[58vh] lg:max-h-none"
         autoPlay
         muted
         loop
@@ -194,8 +194,6 @@ export function Hero() {
         <RingVisual />
       </section>
 
-      <HeroVideo />
-
       <section className="relative z-20 border-y border-white/5 bg-black/20 backdrop-blur-sm">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-5 sm:gap-6 sm:px-6 sm:py-8 lg:flex-row lg:items-center lg:px-8">
           <p className="shrink-0 text-sm font-medium uppercase tracking-[0.2em] text-white/50">
@@ -205,6 +203,8 @@ export function Hero() {
           <BenefitsMarquee />
         </div>
       </section>
+
+      <HeroVideo />
     </header>
   );
 }
