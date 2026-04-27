@@ -1,4 +1,5 @@
 import {
+  ArrowRight,
   BatteryCharging,
   BrainCircuit,
   Footprints,
@@ -26,9 +27,9 @@ export function FeatureGrid() {
   const { t } = useTranslation();
 
   return (
-    <section id="features" className="relative bg-[#010101] px-5 py-24 sm:px-6 lg:px-8" aria-labelledby="features-title">
+    <section id="features" className="relative bg-[#010101] px-5 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="features-title">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
+        <div className="grid gap-5 sm:gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -47,14 +48,14 @@ export function FeatureGrid() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-8 grid gap-4 sm:mt-14 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => {
             const Icon = feature.icon;
             const copy = t.features.items[index];
             return (
               <motion.article
                 key={copy.title}
-                className="group glass-panel relative overflow-hidden rounded-3xl p-6"
+                className="group glass-panel relative overflow-hidden rounded-2xl p-5 sm:rounded-3xl sm:p-6"
                 initial={{ opacity: 0, y: 24 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
@@ -65,11 +66,20 @@ export function FeatureGrid() {
                 <span className="grid h-12 w-12 place-items-center rounded-2xl border border-white/10 bg-white/[0.06] text-[#FA93FA]">
                   <Icon className="h-5 w-5" />
                 </span>
-                <h3 className="mt-7 text-lg font-semibold text-white">{copy.title}</h3>
+                <h3 className="mt-5 text-lg font-semibold text-white sm:mt-7">{copy.title}</h3>
                 <p className="mt-3 text-sm leading-7 text-white/58">{copy.text}</p>
               </motion.article>
             );
           })}
+        </div>
+        <div className="mt-8 flex justify-center sm:mt-12">
+          <a
+            href="#order"
+            className="focus-ring inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-semibold text-[#050505] transition hover:scale-[1.01] sm:w-auto"
+          >
+            {t.hero.primaryCta}
+            <ArrowRight className="h-4 w-4" />
+          </a>
         </div>
       </div>
     </section>

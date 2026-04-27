@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Check, PackageCheck, ShieldCheck, Sparkles } from "lucide-react";
+import { Check, PackageCheck, ShieldCheck, ShoppingBag, Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 import { assets } from "../lib/assets";
 import { useTranslation } from "../lib/i18n";
@@ -26,16 +26,16 @@ export function ProductDetails() {
   const [selectedSize, setSelectedSize] = useState("9");
 
   return (
-    <section id="details" className="relative bg-[#010101] px-5 py-24 sm:px-6 lg:px-8" aria-labelledby="details-title">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-center">
+    <section id="details" className="relative bg-[#010101] px-5 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="details-title">
+      <div className="mx-auto grid max-w-7xl gap-8 sm:gap-12 lg:grid-cols-[1fr_0.95fr] lg:items-center">
         <motion.div
-          className="relative min-h-[560px] overflow-hidden rounded-[2rem] border border-white/10 bg-[radial-gradient(circle_at_50%_30%,rgba(250,147,250,0.18),transparent_36%),linear-gradient(145deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))] p-8"
+          className="relative min-h-[340px] overflow-hidden rounded-[1.5rem] border border-white/10 bg-[radial-gradient(circle_at_50%_30%,rgba(250,147,250,0.12),transparent_36%),linear-gradient(145deg,rgba(255,255,255,0.07),rgba(255,255,255,0.02))] p-4 sm:min-h-[560px] sm:rounded-[2rem] sm:p-8"
           initial={{ opacity: 0, x: -32 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.35 }}
           transition={{ duration: 0.75 }}
         >
-          <div className="flex h-full min-h-[500px] items-center justify-center">
+          <div className="flex h-full min-h-[300px] items-center justify-center sm:min-h-[500px]">
             <img
               src={assets.ring}
               alt={t.details.imageAlt}
@@ -58,19 +58,19 @@ export function ProductDetails() {
             <Sparkles className="h-4 w-4" />
             {t.details.badge}
           </span>
-          <h2 id="details-title" className="mt-6 text-4xl font-semibold tracking-normal text-white sm:text-6xl">
+          <h2 id="details-title" className="mt-5 text-4xl font-semibold tracking-normal text-white sm:mt-6 sm:text-6xl">
             RingConn Gen 2 Air
           </h2>
-          <p className="mt-5 text-base leading-8 text-white/62 sm:text-lg">
+          <p className="mt-4 text-base leading-8 text-white/62 sm:mt-5 sm:text-lg">
             {t.details.description}
           </p>
 
-          <div className="mt-7 flex items-end gap-4">
-            <p className="text-5xl font-semibold text-white">249 EUR</p>
+          <div className="mt-6 flex flex-wrap items-end gap-3 sm:mt-7 sm:gap-4">
+            <p className="text-4xl font-semibold text-white sm:text-5xl">249 EUR</p>
             <p className="pb-2 text-xl text-white/40 line-through">329 EUR</p>
           </div>
 
-          <div className="mt-9 space-y-7">
+          <div className="mt-7 space-y-6 sm:mt-9 sm:space-y-7">
             <div>
               <p className="text-sm font-semibold text-white">{t.details.finish}</p>
               <div className="mt-3 flex flex-wrap gap-3">
@@ -125,7 +125,7 @@ export function ProductDetails() {
             </div>
           </div>
 
-          <div className="mt-9 grid gap-3 sm:grid-cols-2">
+          <div className="mt-7 grid gap-3 sm:mt-9 sm:grid-cols-2">
             {t.details.benefits.map((benefit) => (
               <div key={benefit} className="flex items-center gap-3 text-sm text-white/68">
                 <Check className="h-4 w-4 text-[#FA93FA]" />
@@ -134,7 +134,15 @@ export function ProductDetails() {
             ))}
           </div>
 
-          <div className="glass-panel mt-9 rounded-3xl p-6">
+          <a
+            href="#order"
+            className="focus-ring mt-8 inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-semibold text-[#050505] transition hover:scale-[1.01] sm:w-auto"
+          >
+            <ShoppingBag className="h-5 w-5" />
+            {t.hero.primaryCta}
+          </a>
+
+          <div className="glass-panel mt-8 rounded-2xl p-5 sm:mt-9 sm:rounded-3xl sm:p-6">
             <div className="flex items-center gap-3">
               <PackageCheck className="h-5 w-5 text-[#FA93FA]" />
               <h3 className="font-semibold text-white">{t.details.includedTitle}</h3>

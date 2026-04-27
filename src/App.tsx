@@ -6,6 +6,7 @@ import { FeatureGrid } from "./components/FeatureGrid";
 import { Footer } from "./components/Footer";
 import { HealthInsights } from "./components/HealthInsights";
 import { Hero } from "./components/Hero";
+import { MobileStickyCta } from "./components/MobileStickyCta";
 import { ProductDetails } from "./components/ProductDetails";
 import { ProductShowcase } from "./components/ProductShowcase";
 import { PurchaseForm } from "./components/PurchaseForm";
@@ -15,7 +16,7 @@ import { TranslationProvider } from "./lib/i18n";
 export default function App() {
   return (
     <TranslationProvider>
-      <main className="min-h-screen overflow-hidden bg-[#010101] text-white">
+      <main className="min-h-screen overflow-hidden bg-[#010101] pb-24 text-white sm:pb-0">
         <Hero />
         <ProductShowcase />
         <FeatureGrid />
@@ -28,6 +29,7 @@ export default function App() {
         <CheckoutSection />
         <FAQ />
         <Footer />
+        <MobileStickyCta />
       </main>
     </TranslationProvider>
   );

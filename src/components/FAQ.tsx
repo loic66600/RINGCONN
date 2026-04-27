@@ -6,7 +6,7 @@ export function FAQ() {
   const { t } = useTranslation();
 
   return (
-    <section className="relative bg-[#010101] px-5 py-24 sm:px-6 lg:px-8" aria-labelledby="faq-title">
+    <section className="relative bg-[#010101] px-5 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="faq-title">
       <div className="mx-auto max-w-5xl">
         <motion.div
           className="text-center"
@@ -23,11 +23,11 @@ export function FAQ() {
           </h2>
         </motion.div>
 
-        <div className="mt-12 grid gap-4">
+        <div className="mt-8 grid gap-4 sm:mt-12">
           {t.faq.items.map((faq, index) => (
             <motion.details
               key={faq.question}
-              className="group glass-panel rounded-3xl p-6"
+              className="group glass-panel rounded-2xl p-5 sm:rounded-3xl sm:p-6"
               initial={{ opacity: 0, y: 18 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}

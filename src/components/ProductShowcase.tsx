@@ -18,7 +18,7 @@ export function ProductShowcase() {
   return (
     <section
       id="showcase"
-      className="relative overflow-hidden bg-[#010101] px-5 py-24 sm:px-6 lg:px-8"
+      className="relative overflow-hidden bg-[#010101] px-5 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24"
       aria-labelledby="showcase-title"
     >
       <div className="mx-auto max-w-7xl">
@@ -40,10 +40,10 @@ export function ProductShowcase() {
           </p>
         </motion.div>
 
-        <div className="relative mx-auto mt-10 max-w-5xl pb-8 lg:mt-12 lg:min-h-[660px] lg:pb-0">
-          <div className="absolute inset-x-0 top-16 h-[560px] rounded-[2rem] bg-[radial-gradient(circle_at_50%_45%,rgba(201,103,232,0.22),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.05),transparent)] blur-3xl lg:inset-0 lg:h-auto" />
+        <div className="relative mx-auto mt-8 max-w-5xl pb-2 sm:mt-10 sm:pb-8 lg:mt-12 lg:min-h-[660px] lg:pb-0">
+          <div className="absolute inset-x-0 top-12 h-[360px] rounded-[2rem] bg-[radial-gradient(circle_at_50%_45%,rgba(201,103,232,0.2),transparent_42%),linear-gradient(180deg,rgba(255,255,255,0.05),transparent)] blur-3xl sm:h-[560px] lg:inset-0 lg:h-auto" />
           <motion.div
-            className="relative z-10 mx-auto mt-8 flex aspect-square w-[86%] max-w-[480px] items-center justify-center rounded-full border border-white/10 bg-white/[0.025] backdrop-blur-xl sm:w-[70%] lg:absolute lg:left-1/2 lg:top-[47%] lg:mt-0 lg:w-[72%] lg:max-w-[520px] lg:-translate-x-1/2 lg:-translate-y-1/2"
+            className="relative z-10 mx-auto mt-6 flex aspect-square w-[92%] max-w-[390px] items-center justify-center rounded-full border border-white/10 bg-white/[0.025] backdrop-blur-xl sm:mt-8 sm:w-[70%] sm:max-w-[480px] lg:absolute lg:left-1/2 lg:top-[47%] lg:mt-0 lg:w-[72%] lg:max-w-[520px] lg:-translate-x-1/2 lg:-translate-y-1/2"
             initial={{ opacity: 0, scale: 0.88 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.4 }}
@@ -61,7 +61,7 @@ export function ProductShowcase() {
             <div className="absolute z-0 h-[38%] w-[58%] rounded-full border-[16px] border-white/5 bg-[linear-gradient(135deg,rgba(255,255,255,0.08),rgba(250,147,250,0.1),rgba(152,58,214,0.16))] opacity-45" />
           </motion.div>
 
-          <div className="relative z-20 mt-6 grid gap-4 sm:grid-cols-2 lg:mt-0 lg:block">
+          <div className="relative z-20 mt-5 grid gap-3 sm:grid-cols-2 sm:gap-4 lg:mt-0 lg:block">
             {metrics.map((metric, index) => {
               const Icon = metric.icon;
               const copy = t.showcase.metrics[index];
@@ -69,7 +69,7 @@ export function ProductShowcase() {
               return (
                 <motion.article
                   key={copy.label}
-                  className={`glass-panel rounded-3xl p-5 lg:absolute lg:w-56 ${metric.position}`}
+                  className={`glass-panel rounded-2xl p-4 sm:rounded-3xl sm:p-5 lg:absolute lg:w-56 ${metric.position}`}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.35 }}

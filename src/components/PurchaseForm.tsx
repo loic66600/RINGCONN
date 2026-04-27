@@ -18,8 +18,8 @@ export function PurchaseForm() {
   };
 
   return (
-    <section id="order" className="relative bg-[#010101] px-5 py-24 sm:px-6 lg:px-8" aria-labelledby="form-title">
-      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+    <section id="order" className="relative bg-[#010101] px-5 py-14 sm:px-6 sm:py-20 lg:px-8 lg:py-24" aria-labelledby="form-title">
+      <div className="mx-auto grid max-w-7xl gap-8 sm:gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,7 +32,7 @@ export function PurchaseForm() {
           <h2 id="form-title" className="mt-4 text-3xl font-semibold tracking-normal text-white sm:text-5xl">
             {t.form.title}
           </h2>
-          <p className="mt-6 text-base leading-8 text-white/62 sm:text-lg">
+          <p className="mt-4 text-base leading-8 text-white/62 sm:mt-6 sm:text-lg">
             {t.form.description}
           </p>
         </motion.div>

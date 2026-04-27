@@ -18,7 +18,7 @@ function HeroVideo() {
   }, []);
 
   return (
-    <div className="relative z-10 -mt-20 w-full overflow-hidden sm:-mt-28 lg:-mt-36">
+    <div className="relative z-10 hidden -mt-20 w-full overflow-hidden sm:block sm:-mt-28 lg:-mt-36">
       <video
         ref={videoRef}
         className="mix-blend-screen max-h-[52vh] w-full object-cover sm:max-h-[58vh] lg:max-h-none"
@@ -41,7 +41,7 @@ function RingVisual() {
 
   return (
     <motion.div
-      className="product-reflection relative mx-auto mt-8 flex h-[min(58vh,540px)] w-full max-w-[720px] items-center justify-center sm:mt-10 sm:h-[min(56vh,620px)] lg:mt-8 lg:h-[min(54vh,660px)]"
+      className="product-reflection relative mx-auto mt-4 flex h-[min(42vh,360px)] w-full max-w-[720px] items-center justify-center sm:mt-10 sm:h-[min(56vh,620px)] lg:mt-8 lg:h-[min(54vh,660px)]"
       initial={{ opacity: 0, y: 36, scale: 0.94 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -50,7 +50,7 @@ function RingVisual() {
         <motion.img
           src={assets.ring}
           alt={t.hero.ringAlt}
-          className="relative z-10 max-h-full w-[112%] max-w-[720px] object-contain drop-shadow-[0_24px_70px_rgba(201,103,232,0.24)] sm:w-[108%] lg:w-full"
+          className="relative z-10 max-h-full w-[116%] max-w-[720px] object-contain drop-shadow-[0_24px_70px_rgba(201,103,232,0.24)] sm:w-[108%] lg:w-full"
           loading="eager"
           onError={() => setImageReady(false)}
           animate={shouldReduceMotion ? undefined : { y: [0, -14, 0] }}
@@ -104,7 +104,7 @@ export function Hero() {
   return (
     <header className="relative isolate overflow-hidden bg-[#010101]">
       <div className="luxury-grid pointer-events-none absolute inset-0 opacity-50" />
-      <section className="relative z-20 mx-auto flex min-h-[92svh] max-w-7xl flex-col items-center px-5 pt-5 text-center sm:min-h-screen sm:px-6 sm:pt-8 lg:px-8">
+      <section className="relative z-20 mx-auto flex max-w-7xl flex-col items-center px-5 pb-4 pt-5 text-center sm:min-h-screen sm:px-6 sm:pb-0 sm:pt-8 lg:px-8">
         <nav className="flex w-full flex-wrap items-center justify-between gap-3" aria-label="Main navigation">
           <a href="#" className="text-base font-semibold tracking-[0.18em] text-white">
             RINGCONN
@@ -138,7 +138,7 @@ export function Hero() {
         </nav>
 
         <motion.div
-          className="mt-10 inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 bg-[rgba(28,27,36,0.15)] px-4 py-2 backdrop-blur-xl sm:mt-16 lg:mt-20"
+          className="mt-7 inline-flex max-w-full items-center gap-3 rounded-full border border-white/10 bg-[rgba(28,27,36,0.15)] px-4 py-2 backdrop-blur-xl sm:mt-16 lg:mt-20"
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7 }}
@@ -152,23 +152,23 @@ export function Hero() {
         </motion.div>
 
         <motion.div
-          className="mt-7 max-w-5xl sm:mt-9"
+          className="mt-5 max-w-5xl sm:mt-9"
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.12, duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
         >
-          <h1 className="gradient-text text-[clamp(2.7rem,11vw,5rem)] font-semibold leading-[0.94] tracking-normal lg:text-[80px]">
+          <h1 className="gradient-text text-[clamp(2.35rem,10vw,5rem)] font-semibold leading-[0.94] tracking-normal lg:text-[80px]">
             {t.hero.titleLine1}
             <br />
             {t.hero.titleLine2}
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-7 text-white/68 sm:mt-7 sm:text-lg sm:leading-8">
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/68 sm:mt-7 sm:text-lg sm:leading-8">
             {t.hero.description}
           </p>
         </motion.div>
 
         <motion.div
-          className="mt-7 flex w-full flex-col items-center justify-center gap-4 sm:mt-9 sm:flex-row"
+          className="mt-6 flex w-full flex-col items-center justify-center gap-3 sm:mt-9 sm:flex-row sm:gap-4"
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.24, duration: 0.7 }}
@@ -197,7 +197,7 @@ export function Hero() {
       <HeroVideo />
 
       <section className="relative z-20 border-y border-white/5 bg-black/20 backdrop-blur-sm">
-        <div className="mx-auto flex max-w-7xl flex-col gap-6 px-5 py-8 sm:px-6 lg:flex-row lg:items-center lg:px-8">
+        <div className="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-5 sm:gap-6 sm:px-6 sm:py-8 lg:flex-row lg:items-center lg:px-8">
           <p className="shrink-0 text-sm font-medium uppercase tracking-[0.2em] text-white/50">
             {t.hero.trusted}
           </p>
