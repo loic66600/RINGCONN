@@ -7,6 +7,7 @@ import { FeatureGrid } from "./components/FeatureGrid";
 import { Footer } from "./components/Footer";
 import { HealthInsights } from "./components/HealthInsights";
 import { Hero } from "./components/Hero";
+import { ContactPage, LegalNotice, PrivacyPolicy, TermsOfService } from "./components/LegalPages";
 import { MobileStickyCta } from "./components/MobileStickyCta";
 import { ProductDetails } from "./components/ProductDetails";
 import { ProductShowcase } from "./components/ProductShowcase";
@@ -26,9 +27,13 @@ export default function App() {
         <ComparisonSection />
         <SocialProof />
         <ProductDetails />
-        <PurchaseForm />
         <CheckoutSection />
+        <PurchaseForm />
         <FAQ />
+        <TermsOfService />
+        <PrivacyPolicy />
+        <LegalNotice />
+        <ContactPage />
         <Footer />
         <MobileStickyCta />
         <CookieBanner />
