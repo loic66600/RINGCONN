@@ -75,7 +75,7 @@ export function FeatureGrid() {
         <div className="mt-8 flex justify-center sm:mt-12">
           <a
             href="#order"
-            className="focus-ring inline-flex w-full items-center justify-center gap-3 rounded-full bg-white px-6 py-4 text-sm font-semibold text-[#050505] transition hover:scale-[1.01] sm:w-auto"
+            className="focus-ring inline-flex w-full items-center justify-center gap-3 rounded-full border border-white/15 bg-white/[0.04] px-6 py-4 text-sm font-semibold text-white transition hover:border-[#FA93FA]/50 hover:bg-white/[0.08] sm:w-auto"
           >
             {t.hero.primaryCta}
             <ArrowRight className="h-4 w-4" />
